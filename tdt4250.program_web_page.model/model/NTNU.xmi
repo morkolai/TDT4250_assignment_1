@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program_web_page:NTNU xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:program_web_page="platform:/plugin/tdt4250.program_web_page.model/model/program_web_page.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250.program_web_page.model/model/program_web_page.ecore program_web_page.ecore"/>
