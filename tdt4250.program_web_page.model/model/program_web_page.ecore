@@ -20,6 +20,8 @@
         eType="#//CourseGroup" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
         eType="#//Course"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specialisation" eType="#//Specialisation"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CourseGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
