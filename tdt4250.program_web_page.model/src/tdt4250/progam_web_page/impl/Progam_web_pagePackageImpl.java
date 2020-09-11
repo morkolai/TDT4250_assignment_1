@@ -259,6 +259,15 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getSemester_Specialisation() {
+		return (EReference)semesterEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCourseGroup() {
 		return courseGroupEClass;
 	}
@@ -313,7 +322,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCourse_Id() {
+	public EAttribute getCourse_CourseCode() {
 		return (EAttribute)courseEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -439,6 +448,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 		createEAttribute(semesterEClass, SEMESTER__SEMSETER_NUMB);
 		createEReference(semesterEClass, SEMESTER__COURSE_GROUPS);
 		createEReference(semesterEClass, SEMESTER__COURSES);
+		createEReference(semesterEClass, SEMESTER__SPECIALISATION);
 
 		courseGroupEClass = createEClass(COURSE_GROUP);
 		createEAttribute(courseGroupEClass, COURSE_GROUP__MINIMUM_GROUP_CREDITS);
@@ -447,7 +457,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 
 		courseEClass = createEClass(COURSE);
 		createEAttribute(courseEClass, COURSE__NAME);
-		createEAttribute(courseEClass, COURSE__ID);
+		createEAttribute(courseEClass, COURSE__COURSE_CODE);
 		createEAttribute(courseEClass, COURSE__CREDITS);
 		createEAttribute(courseEClass, COURSE__DESCRIPTION);
 		createEAttribute(courseEClass, COURSE__LEVEL);
@@ -505,6 +515,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 		initEAttribute(getSemester_SemseterNumb(), ecorePackage.getEInt(), "semseterNumb", null, 0, 1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSemester_CourseGroups(), this.getCourseGroup(), null, "courseGroups", null, 0, -1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSemester_Courses(), this.getCourse(), null, "courses", null, 0, -1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSemester_Specialisation(), this.getSpecialisation(), null, "specialisation", null, 0, 1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(courseGroupEClass, CourseGroup.class, "CourseGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCourseGroup_MinimumGroupCredits(), ecorePackage.getEFloat(), "minimumGroupCredits", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -513,7 +524,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 
 		initEClass(courseEClass, Course.class, "Course", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCourse_Name(), ecorePackage.getEString(), "name", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCourse_Id(), ecorePackage.getEString(), "id", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_CourseCode(), ecorePackage.getEString(), "courseCode", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Credits(), ecorePackage.getEFloat(), "credits", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Description(), ecorePackage.getEString(), "description", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Level(), this.getdegreeLevel(), "level", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -541,6 +552,8 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 		// Create annotations
 		// http://www.eclipse.org/emf/2002/Ecore
 		createEcoreAnnotations();
+		// http://www.eclipse.org/acceleo/query/1.0
+		create_1Annotations();
 	}
 
 	/**
@@ -552,10 +565,38 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 	protected void createEcoreAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore";
 		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "validationDelegates", "http://www.eclipse.org/acceleo/query/1.0"
+		   });
+		addAnnotation
 		  (courseGroupEClass,
 		   source,
 		   new String[] {
 			   "constraints", "enoghCoursesInGroup"
+		   });
+		addAnnotation
+		  (courseEClass,
+		   source,
+		   new String[] {
+			   "constraints", "courseCodeFormat"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/acceleo/query/1.0</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void create_1Annotations() {
+		String source = "http://www.eclipse.org/acceleo/query/1.0";
+		addAnnotation
+		  (courseEClass,
+		   source,
+		   new String[] {
+			   "courseCodeFormat", "aql:self.courseCode.ismatrix(\'\\b[a-zA-Z]{2,3}\\d{4}\')"
 		   });
 	}
 

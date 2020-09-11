@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link tdt4250.progam_web_page.Semester#getSemseterNumb <em>Semseter Numb</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.Semester#getCourseGroups <em>Course Groups</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.Semester#getCourses <em>Courses</em>}</li>
+ *   <li>{@link tdt4250.progam_web_page.Semester#getSpecialisation <em>Specialisation</em>}</li>
  * </ul>
  *
  * @see tdt4250.progam_web_page.Progam_web_pagePackage#getSemester()
@@ -70,5 +71,27 @@ public interface Semester extends EObject {
 	 * @generated
 	 */
 	EList<Course> getCourses();
+
+	/**
+	 * Returns the value of the '<em><b>Specialisation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Specialisation</em>' containment reference.
+	 * @see #setSpecialisation(Specialisation)
+	 * @see tdt4250.progam_web_page.Progam_web_pagePackage#getSemester_Specialisation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Specialisation getSpecialisation();
+
+	/**
+	 * Sets the value of the '{@link tdt4250.progam_web_page.Semester#getSpecialisation <em>Specialisation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Specialisation</em>' containment reference.
+	 * @see #getSpecialisation()
+	 * @generated
+	 */
+	void setSpecialisation(Specialisation value);
 
 } // Semester

@@ -22,7 +22,7 @@ import tdt4250.progam_web_page.degreeLevel;
  * </p>
  * <ul>
  *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getName <em>Name</em>}</li>
- *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getId <em>Id</em>}</li>
+ *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getCourseCode <em>Course Code</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getCredits <em>Credits</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getLevel <em>Level</em>}</li>
@@ -53,24 +53,24 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getCourseCode() <em>Course Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getCourseCode()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String COURSE_CODE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getCourseCode() <em>Course Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getCourseCode()
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected String courseCode = COURSE_CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCredits() <em>Credits</em>}' attribute.
@@ -197,8 +197,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
+	public String getCourseCode() {
+		return courseCode;
 	}
 
 	/**
@@ -206,11 +206,11 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
+	public void setCourseCode(String newCourseCode) {
+		String oldCourseCode = courseCode;
+		courseCode = newCourseCode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Progam_web_pagePackage.COURSE__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Progam_web_pagePackage.COURSE__COURSE_CODE, oldCourseCode, courseCode));
 	}
 
 	/**
@@ -307,8 +307,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 		switch (featureID) {
 			case Progam_web_pagePackage.COURSE__NAME:
 				return getName();
-			case Progam_web_pagePackage.COURSE__ID:
-				return getId();
+			case Progam_web_pagePackage.COURSE__COURSE_CODE:
+				return getCourseCode();
 			case Progam_web_pagePackage.COURSE__CREDITS:
 				return getCredits();
 			case Progam_web_pagePackage.COURSE__DESCRIPTION:
@@ -332,8 +332,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case Progam_web_pagePackage.COURSE__NAME:
 				setName((String)newValue);
 				return;
-			case Progam_web_pagePackage.COURSE__ID:
-				setId((String)newValue);
+			case Progam_web_pagePackage.COURSE__COURSE_CODE:
+				setCourseCode((String)newValue);
 				return;
 			case Progam_web_pagePackage.COURSE__CREDITS:
 				setCredits((Float)newValue);
@@ -362,8 +362,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case Progam_web_pagePackage.COURSE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Progam_web_pagePackage.COURSE__ID:
-				setId(ID_EDEFAULT);
+			case Progam_web_pagePackage.COURSE__COURSE_CODE:
+				setCourseCode(COURSE_CODE_EDEFAULT);
 				return;
 			case Progam_web_pagePackage.COURSE__CREDITS:
 				setCredits(CREDITS_EDEFAULT);
@@ -391,8 +391,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 		switch (featureID) {
 			case Progam_web_pagePackage.COURSE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Progam_web_pagePackage.COURSE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case Progam_web_pagePackage.COURSE__COURSE_CODE:
+				return COURSE_CODE_EDEFAULT == null ? courseCode != null : !COURSE_CODE_EDEFAULT.equals(courseCode);
 			case Progam_web_pagePackage.COURSE__CREDITS:
 				return credits != CREDITS_EDEFAULT;
 			case Progam_web_pagePackage.COURSE__DESCRIPTION:
@@ -417,8 +417,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", id: ");
-		result.append(id);
+		result.append(", courseCode: ");
+		result.append(courseCode);
 		result.append(", credits: ");
 		result.append(credits);
 		result.append(", description: ");

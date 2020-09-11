@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link tdt4250.progam_web_page.Course#getName <em>Name</em>}</li>
- *   <li>{@link tdt4250.progam_web_page.Course#getId <em>Id</em>}</li>
+ *   <li>{@link tdt4250.progam_web_page.Course#getCourseCode <em>Course Code</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.Course#getCredits <em>Credits</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.Course#getDescription <em>Description</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.Course#getLevel <em>Level</em>}</li>
@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see tdt4250.progam_web_page.Progam_web_pagePackage#getCourse()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='courseCodeFormat'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 courseCodeFormat='aql:self.courseCode.ismatrix(\'\\b[a-zA-Z]{2,3}\\d{4}\')'"
  * @generated
  */
 public interface Course extends EObject {
@@ -49,26 +50,26 @@ public interface Course extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Course Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see tdt4250.progam_web_page.Progam_web_pagePackage#getCourse_Id()
+	 * @return the value of the '<em>Course Code</em>' attribute.
+	 * @see #setCourseCode(String)
+	 * @see tdt4250.progam_web_page.Progam_web_pagePackage#getCourse_CourseCode()
 	 * @model
 	 * @generated
 	 */
-	String getId();
+	String getCourseCode();
 
 	/**
-	 * Sets the value of the '{@link tdt4250.progam_web_page.Course#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link tdt4250.progam_web_page.Course#getCourseCode <em>Course Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
+	 * @param value the new value of the '<em>Course Code</em>' attribute.
+	 * @see #getCourseCode()
 	 * @generated
 	 */
-	void setId(String value);
+	void setCourseCode(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Credits</b></em>' attribute.

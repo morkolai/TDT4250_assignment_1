@@ -5,69 +5,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:program_web_page="platform:/plugin/tdt4250.program_web_page.model/model/program_web_page.ecore"
     xsi:schemaLocation="platform:/plugin/tdt4250.program_web_page.model/model/program_web_page.ecore program_web_page.ecore">
-  <programmes
-      name="Master in Informatics">
-    <specialisations
-        name="Software">
-      <semesters
-          semseterNumb="1"
-          courses="//@courses.3">
-        <courseGroups
-            minimumGroupCredits="15.0"
-            courses="//@courses.1 //@courses.2"
-            mandatoryType="M2A"/>
-        <courseGroups
-            minimumGroupCredits="7.5"
-            courses="//@courses.0"
-            mandatoryType="O"/>
-      </semesters>
-      <semesters
-          semseterNumb="2">
-        <courseGroups
-            minimumGroupCredits="15.0"
-            courses="//@courses.4 //@courses.5"
-            mandatoryType="O"/>
-        <courseGroups
-            minimumGroupCredits="7.5"
-            courses="//@courses.6 //@courses.7"
-            mandatoryType="M1A"/>
-      </semesters>
-    </specialisations>
-  </programmes>
-  <courses name="Information Systems"
-      id="TDT4175"
+  <courses name="Test Course"
+      courseCode="ABC1234"
       credits="7.5"
-      description="sdklfnsdklfnklsdnflksdnf"
-      level="thirdLEvel"/>
-  <courses name="Advanced Software Design"
-      id="TDT4250"
-      credits="7.5"
-      description="sdknfklsdnflknsdklfnsdklnfgejrngier"
-      level="higherLevel"/>
-  <courses name="Applied Data Science"
-      id="TDT4259"
-      credits="7.5"
-      description="lsknfklsdngpisotegnosng"
-      level="higherLevel"/>
-  <courses name="Introduction to Artificial Intelligence"
-      id="TDT4136"
-      credits="7.5"
-      description="øosdmføsøsdmfølsdmflømsdf"
-      level="thirdLEvel"/>
-  <courses name="Software Architecture"
-      id="TDT4240"
-      credits="7.5"
-      level="thirdLEvel"/>
-  <courses name="Empirical research method..."
-      id="IT3010"
-      credits="7.5"
-      level="higherLevel"/>
-  <courses name="Software Security and Data Privacy"
-      id="TDT4237"
-      credits="7.5"
-      level="higherLevel"/>
-  <courses name="Advance Software Engineering"
-      id="TDT4257"
-      credits="7.5"
+      description="sjdfjdsnfkdf"
       level="higherLevel"/>
 </program_web_page:NTNU>

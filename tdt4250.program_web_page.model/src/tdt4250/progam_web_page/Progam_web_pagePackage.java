@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see tdt4250.progam_web_page.Progam_web_pageFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore validationDelegates='http://www.eclipse.org/acceleo/query/1.0'"
  * @generated
  */
 public interface Progam_web_pagePackage extends EPackage {
@@ -196,13 +197,22 @@ public interface Progam_web_pagePackage extends EPackage {
 	int SEMESTER__COURSES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Specialisation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMESTER__SPECIALISATION = 3;
+
+	/**
 	 * The number of structural features of the '<em>Semester</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER_FEATURE_COUNT = 3;
+	int SEMESTER_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Semester</em>' class.
@@ -288,13 +298,13 @@ public interface Progam_web_pagePackage extends EPackage {
 	int COURSE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Course Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE__ID = 1;
+	int COURSE__COURSE_CODE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Credits</b></em>' attribute.
@@ -536,6 +546,17 @@ public interface Progam_web_pagePackage extends EPackage {
 	EReference getSemester_Courses();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link tdt4250.progam_web_page.Semester#getSpecialisation <em>Specialisation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Specialisation</em>'.
+	 * @see tdt4250.progam_web_page.Semester#getSpecialisation()
+	 * @see #getSemester()
+	 * @generated
+	 */
+	EReference getSemester_Specialisation();
+
+	/**
 	 * Returns the meta object for class '{@link tdt4250.progam_web_page.CourseGroup <em>Course Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -600,15 +621,15 @@ public interface Progam_web_pagePackage extends EPackage {
 	EAttribute getCourse_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link tdt4250.progam_web_page.Course#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link tdt4250.progam_web_page.Course#getCourseCode <em>Course Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see tdt4250.progam_web_page.Course#getId()
+	 * @return the meta object for the attribute '<em>Course Code</em>'.
+	 * @see tdt4250.progam_web_page.Course#getCourseCode()
 	 * @see #getCourse()
 	 * @generated
 	 */
-	EAttribute getCourse_Id();
+	EAttribute getCourse_CourseCode();
 
 	/**
 	 * Returns the meta object for the attribute '{@link tdt4250.progam_web_page.Course#getCredits <em>Credits</em>}'.
@@ -824,6 +845,14 @@ public interface Progam_web_pagePackage extends EPackage {
 		EReference SEMESTER__COURSES = eINSTANCE.getSemester_Courses();
 
 		/**
+		 * The meta object literal for the '<em><b>Specialisation</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEMESTER__SPECIALISATION = eINSTANCE.getSemester_Specialisation();
+
+		/**
 		 * The meta object literal for the '{@link tdt4250.progam_web_page.impl.CourseGroupImpl <em>Course Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -876,12 +905,12 @@ public interface Progam_web_pagePackage extends EPackage {
 		EAttribute COURSE__NAME = eINSTANCE.getCourse_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Course Code</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COURSE__ID = eINSTANCE.getCourse_Id();
+		EAttribute COURSE__COURSE_CODE = eINSTANCE.getCourse_CourseCode();
 
 		/**
 		 * The meta object literal for the '<em><b>Credits</b></em>' attribute feature.

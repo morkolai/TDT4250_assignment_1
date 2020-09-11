@@ -209,7 +209,46 @@ public class Progam_web_pageValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCourse(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(course, diagnostics, context);
+		if (!validate_NoCircularContainment(course, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(course, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(course, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(course, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(course, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(course, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(course, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(course, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(course, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCourse_courseCodeFormat(course, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the courseCodeFormat constraint of '<em>Course</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String COURSE__COURSE_CODE_FORMAT__EEXPRESSION = "aql:self.courseCode.ismatrix('\\b[a-zA-Z]{2,3}\\d{4}')";
+
+	/**
+	 * Validates the courseCodeFormat constraint of '<em>Course</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCourse_courseCodeFormat(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(Progam_web_pagePackage.Literals.COURSE,
+				 course,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "courseCodeFormat",
+				 COURSE__COURSE_CODE_FORMAT__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
