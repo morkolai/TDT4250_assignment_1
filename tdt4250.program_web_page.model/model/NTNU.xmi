@@ -38,6 +38,14 @@
             courses="//@courses.7"
             mandatoryLevel="M1A"/>
       </semesters>
+      <semesters
+          semseterNumb="2">
+        <courseGroups
+            courses="//@courses.8"/>
+        <courseGroups
+            courses="//@courses.9"
+            mandatoryLevel="M1A"/>
+      </semesters>
     </specialisations>
   </programmes>
   <courses name="Test Course"
@@ -76,6 +84,15 @@
       level="higherLevel"/>
   <courses name="Machine Learning"
       courseCode="TDT4173"
+      credits="7.5"
+      description="asd"
+      level="higherLevel"/>
+  <courses name="Artificial Intelligence Methods"
+      courseCode="TDT4171"
+      credits="7.5"
+      level="higherLevel"/>
+  <courses name="Artificial Intelligence Programming"
+      courseCode="IT3105"
       credits="7.5"
       description="asd"
       level="higherLevel"/>
