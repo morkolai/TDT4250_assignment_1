@@ -5,9 +5,78 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:program_web_page="platform:/plugin/tdt4250.program_web_page.model/model/program_web_page.ecore"
     xsi:schemaLocation="platform:/plugin/tdt4250.program_web_page.model/model/program_web_page.ecore program_web_page.ecore">
+  <programmes
+      name="Informatikk master">
+    <specialisations
+        name="Programvaresystemer">
+      <semesters
+          semseterNumb="1">
+        <courseGroups
+            courses="//@courses.2 //@courses.1"
+            mandatoryLevel="M2A"/>
+        <courseGroups
+            courses="//@courses.6"/>
+      </semesters>
+      <semesters
+          semseterNumb="2">
+        <courseGroups
+            courses="//@courses.3"
+            mandatoryLevel="M1A"/>
+      </semesters>
+      <semesters
+          semseterNumb="3"/>
+      <semesters
+          semseterNumb="4"/>
+    </specialisations>
+    <specialisations
+        name="AI">
+      <semesters
+          semseterNumb="1">
+        <courseGroups
+            courses="//@courses.5 //@courses.4"/>
+        <courseGroups
+            courses="//@courses.7"
+            mandatoryLevel="M1A"/>
+      </semesters>
+    </specialisations>
+  </programmes>
   <courses name="Test Course"
       courseCode="ABC1234"
       credits="7.5"
       description="sjdfjdsnfkdf"
+      level="higherLevel"/>
+  <courses name="Advanced software design"
+      courseCode="TDT4250"
+      credits="7.5"
+      description="some text"
+      level="higherLevel"/>
+  <courses name="Applied data science"
+      courseCode="TDT4259"
+      credits="7.5"
+      description="asd"
+      level="higherLevel"/>
+  <courses name="Software Security and Data Privacy"
+      courseCode="tdt4237"
+      credits="7.5"
+      description="uuuughhg"
+      level="higherLevel"/>
+  <courses name="Introduction to Artificial Intelligence"
+      courseCode="TDT4136"
+      credits="7.5"
+      description="asda"
+      level="higherLevel"/>
+  <courses name="Cognitive Architectures"
+      courseCode="TDT4137"
+      credits="7.5"
+      level="higherLevel"/>
+  <courses name="Information systems"
+      courseCode="tdt4175"
+      credits="7.5"
+      description="qweqw"
+      level="higherLevel"/>
+  <courses name="Machine Learning"
+      courseCode="TDT4173"
+      credits="7.5"
+      description="asd"
       level="higherLevel"/>
 </program_web_page:NTNU>
