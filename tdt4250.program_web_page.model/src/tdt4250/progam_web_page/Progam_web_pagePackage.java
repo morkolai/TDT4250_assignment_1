@@ -343,13 +343,22 @@ public interface Progam_web_pagePackage extends EPackage {
 	int COURSE__SELECTED = 5;
 
 	/**
+	 * The feature id for the '<em><b>Full Course Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__FULL_COURSE_TITLE = 6;
+
+	/**
 	 * The number of structural features of the '<em>Course</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_FEATURE_COUNT = 6;
+	int COURSE_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Course</em>' class.
@@ -676,6 +685,17 @@ public interface Progam_web_pagePackage extends EPackage {
 	EAttribute getCourse_Selected();
 
 	/**
+	 * Returns the meta object for the attribute '{@link tdt4250.progam_web_page.Course#getFullCourseTitle <em>Full Course Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Full Course Title</em>'.
+	 * @see tdt4250.progam_web_page.Course#getFullCourseTitle()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_FullCourseTitle();
+
+	/**
 	 * Returns the meta object for class '{@link tdt4250.progam_web_page.NTNU <em>NTNU</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -943,6 +963,14 @@ public interface Progam_web_pagePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COURSE__SELECTED = eINSTANCE.getCourse_Selected();
+
+		/**
+		 * The meta object literal for the '<em><b>Full Course Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__FULL_COURSE_TITLE = eINSTANCE.getCourse_FullCourseTitle();
 
 		/**
 		 * The meta object literal for the '{@link tdt4250.progam_web_page.impl.NTNUImpl <em>NTNU</em>}' class.

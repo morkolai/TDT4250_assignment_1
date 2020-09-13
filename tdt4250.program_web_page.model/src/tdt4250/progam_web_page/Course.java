@@ -19,11 +19,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link tdt4250.progam_web_page.Course#getDescription <em>Description</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.Course#getLevel <em>Level</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.Course#isSelected <em>Selected</em>}</li>
+ *   <li>{@link tdt4250.progam_web_page.Course#getFullCourseTitle <em>Full Course Title</em>}</li>
  * </ul>
  *
  * @see tdt4250.progam_web_page.Progam_web_pagePackage#getCourse()
  * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='courseCodeFormat'"
- *        annotation="http://www.eclipse.org/acceleo/query/1.0 courseCodeFormat='aql:self.courseCode.ismatrix(\'\\b[a-zA-Z]{2,3}\\d{4}\')'"
+ *        annotation="http://www.eclipse.org/acceleo/query/1.0 courseCodeFormat='self.courseCode.matches(\'[A-Z]{2,3}[0-9]{4}\')'"
  * @generated
  */
 public interface Course extends EObject {
@@ -161,5 +162,16 @@ public interface Course extends EObject {
 	 * @generated
 	 */
 	void setSelected(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Full Course Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Full Course Title</em>' attribute.
+	 * @see tdt4250.progam_web_page.Progam_web_pagePackage#getCourse_FullCourseTitle()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	String getFullCourseTitle();
 
 } // Course

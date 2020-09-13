@@ -45,6 +45,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute program_web_page.ecore#//Course/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute program_web_page.ecore#//Course/level"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute program_web_page.ecore#//Course/selected"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute program_web_page.ecore#//Course/fullCourseTitle"/>
     </genClasses>
     <genClasses ecoreClass="program_web_page.ecore#//NTNU">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference program_web_page.ecore#//NTNU/programmes"/>

@@ -367,6 +367,15 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCourse_FullCourseTitle() {
+		return (EAttribute)courseEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNTNU() {
 		return ntnuEClass;
 	}
@@ -462,6 +471,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 		createEAttribute(courseEClass, COURSE__DESCRIPTION);
 		createEAttribute(courseEClass, COURSE__LEVEL);
 		createEAttribute(courseEClass, COURSE__SELECTED);
+		createEAttribute(courseEClass, COURSE__FULL_COURSE_TITLE);
 
 		ntnuEClass = createEClass(NTNU);
 		createEReference(ntnuEClass, NTNU__PROGRAMMES);
@@ -529,6 +539,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 		initEAttribute(getCourse_Description(), ecorePackage.getEString(), "description", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Level(), this.getdegreeLevel(), "level", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Selected(), ecorePackage.getEBoolean(), "selected", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_FullCourseTitle(), ecorePackage.getEString(), "fullCourseTitle", null, 0, 1, Course.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(ntnuEClass, tdt4250.progam_web_page.NTNU.class, "NTNU", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNTNU_Programmes(), this.getProgramme(), null, "programmes", null, 0, -1, tdt4250.progam_web_page.NTNU.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -596,7 +607,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 		  (courseEClass,
 		   source,
 		   new String[] {
-			   "courseCodeFormat", "aql:self.courseCode.ismatrix(\'\\b[a-zA-Z]{2,3}\\d{4}\')"
+			   "courseCodeFormat", "self.courseCode.matches(\'[A-Z]{2,3}[0-9]{4}\')"
 		   });
 	}
 

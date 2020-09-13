@@ -27,6 +27,7 @@ import tdt4250.progam_web_page.degreeLevel;
  *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#isSelected <em>Selected</em>}</li>
+ *   <li>{@link tdt4250.progam_web_page.impl.CourseImpl#getFullCourseTitle <em>Full Course Title</em>}</li>
  * </ul>
  *
  * @generated
@@ -151,6 +152,16 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @ordered
 	 */
 	protected boolean selected = SELECTED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFullCourseTitle() <em>Full Course Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFullCourseTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FULL_COURSE_TITLE_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -300,6 +311,28 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getFullCourseTitle() {
+		
+		if(this.getName() == null && this.getCourseCode() != null) {
+			return this.getCourseCode();
+		}
+		else if(this.getCourseCode() == null && this.getName() != null) {
+			return this.getName();
+		}
+		else if(this.getCourseCode() == null && this.getName() == null) {
+			return "";
+		}
+		else {
+			return (this.getCourseCode() + " - " + this.getName());
+		}
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -317,6 +350,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return getLevel();
 			case Progam_web_pagePackage.COURSE__SELECTED:
 				return isSelected();
+			case Progam_web_pagePackage.COURSE__FULL_COURSE_TITLE:
+				return getFullCourseTitle();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -401,6 +436,8 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 				return level != LEVEL_EDEFAULT;
 			case Progam_web_pagePackage.COURSE__SELECTED:
 				return selected != SELECTED_EDEFAULT;
+			case Progam_web_pagePackage.COURSE__FULL_COURSE_TITLE:
+				return FULL_COURSE_TITLE_EDEFAULT == null ? getFullCourseTitle() != null : !FULL_COURSE_TITLE_EDEFAULT.equals(getFullCourseTitle());
 		}
 		return super.eIsSet(featureID);
 	}

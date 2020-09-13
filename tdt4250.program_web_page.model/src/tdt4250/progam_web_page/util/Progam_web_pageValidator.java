@@ -228,7 +228,7 @@ public class Progam_web_pageValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static final String COURSE__COURSE_CODE_FORMAT__EEXPRESSION = "aql:self.courseCode.ismatrix('\\b[a-zA-Z]{2,3}\\d{4}')";
+	protected static final String COURSE__COURSE_CODE_FORMAT__EEXPRESSION = "self.courseCode.matches('[A-Z]{2,3}[0-9]{4}')";
 
 	/**
 	 * Validates the courseCodeFormat constraint of '<em>Course</em>'.
