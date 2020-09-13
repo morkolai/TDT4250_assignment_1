@@ -24,7 +24,7 @@ The `Course` class has a OCL constraint that checks with regex if the course cod
 
 ## Derived feature
 
-Markus skriv her
+The `Course` class has a derived feature called `fullCourseTitle` which is computed with two other fields `name` and `courseCode`.
 
 ## Methods
 
