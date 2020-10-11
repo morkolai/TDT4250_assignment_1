@@ -550,6 +550,7 @@ public class Progam_web_pagePackageImpl extends EPackageImpl implements Progam_w
 		addEEnumLiteral(groupTypeEEnum, groupType.O);
 		addEEnumLiteral(groupTypeEEnum, groupType.M1A);
 		addEEnumLiteral(groupTypeEEnum, groupType.M2A);
+		addEEnumLiteral(groupTypeEEnum, groupType.VA);
 
 		initEEnum(degreeLevelEEnum, degreeLevel.class, "degreeLevel");
 		addEEnumLiteral(degreeLevelEEnum, degreeLevel.FIRST_LEVEL);

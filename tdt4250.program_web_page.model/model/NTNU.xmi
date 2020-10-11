@@ -20,13 +20,19 @@
       <semesters
           semseterNumb="2">
         <courseGroups
-            courses="//@courses.3"
+            courses="//@courses.3 //@courses.10"
             mandatoryLevel="M1A"/>
       </semesters>
       <semesters
-          semseterNumb="3"/>
+          semseterNumb="3">
+        <courseGroups
+            courses="//@courses.11"/>
+      </semesters>
       <semesters
-          semseterNumb="4"/>
+          semseterNumb="4">
+        <courseGroups
+            courses="//@courses.12"/>
+      </semesters>
     </specialisations>
     <specialisations
         name="AI">
@@ -46,7 +52,159 @@
             courses="//@courses.9"
             mandatoryLevel="M1A"/>
       </semesters>
+      <semesters
+          semseterNumb="3">
+        <courseGroups
+            courses="//@courses.11"/>
+      </semesters>
+      <semesters
+          semseterNumb="4">
+        <courseGroups
+            courses="//@courses.12"/>
+      </semesters>
     </specialisations>
+  </programmes>
+  <programmes
+      name="Datateknologi 2-årig">
+    <specialisations
+        name="Programvareutvikling">
+      <semesters
+          semseterNumb="1">
+        <courseGroups
+            courses="//@courses.13 //@courses.6"/>
+        <courseGroups
+            courses="//@courses.1 //@courses.14"
+            mandatoryLevel="VA"/>
+      </semesters>
+      <semesters
+          semseterNumb="2">
+        <courseGroups
+            courses="//@courses.10"/>
+        <courseGroups
+            courses="//@courses.1 //@courses.15"
+            mandatoryLevel="VA"/>
+      </semesters>
+      <semesters
+          semseterNumb="3">
+        <courseGroups
+            courses="//@courses.17 //@courses.16"/>
+      </semesters>
+      <semesters
+          semseterNumb="4">
+        <courseGroups
+            courses="//@courses.18"/>
+      </semesters>
+    </specialisations>
+    <specialisations
+        name="Kunstig intelligens">
+      <semesters
+          semseterNumb="1">
+        <courseGroups
+            courses="//@courses.5 //@courses.4"/>
+        <courseGroups
+            courses="//@courses.7"
+            mandatoryLevel="VA"/>
+      </semesters>
+      <semesters
+          semseterNumb="2">
+        <courseGroups
+            courses="//@courses.8"/>
+        <courseGroups
+            courses="//@courses.9"
+            mandatoryLevel="VA"/>
+      </semesters>
+      <semesters
+          semseterNumb="3">
+        <courseGroups
+            courses="//@courses.11"/>
+      </semesters>
+      <semesters
+          semseterNumb="4">
+        <courseGroups
+            courses="//@courses.12"/>
+      </semesters>
+    </specialisations>
+  </programmes>
+  <programmes
+      name="Datateknologi 5-årig">
+    <specialisations
+        name="Programvareutvikling">
+      <semesters
+          semseterNumb="5">
+        <courseGroups
+            courses="//@courses.13 //@courses.6"/>
+        <courseGroups
+            courses="//@courses.1 //@courses.14"
+            mandatoryLevel="VA"/>
+      </semesters>
+      <semesters
+          semseterNumb="6">
+        <courseGroups
+            courses="//@courses.10"/>
+        <courseGroups
+            courses="//@courses.1 //@courses.15"
+            mandatoryLevel="VA"/>
+      </semesters>
+      <semesters
+          semseterNumb="7">
+        <courseGroups
+            courses="//@courses.17 //@courses.16"/>
+      </semesters>
+      <semesters
+          semseterNumb="8">
+        <courseGroups
+            courses="//@courses.18"/>
+      </semesters>
+    </specialisations>
+    <specialisations
+        name="Kunstig intelligens">
+      <semesters
+          semseterNumb="5">
+        <courseGroups
+            courses="//@courses.5 //@courses.4"/>
+        <courseGroups
+            courses="//@courses.7"
+            mandatoryLevel="VA"/>
+      </semesters>
+      <semesters
+          semseterNumb="6">
+        <courseGroups
+            courses="//@courses.8"/>
+        <courseGroups
+            courses="//@courses.9"
+            mandatoryLevel="VA"/>
+      </semesters>
+      <semesters
+          semseterNumb="7">
+        <courseGroups
+            courses="//@courses.11"/>
+      </semesters>
+      <semesters
+          semseterNumb="8">
+        <courseGroups
+            courses="//@courses.12"/>
+      </semesters>
+    </specialisations>
+    <semesters
+        semseterNumb="1">
+      <courseGroups
+          courses="//@courses.19 //@courses.20 //@courses.21"/>
+    </semesters>
+    <semesters
+        semseterNumb="2">
+      <courseGroups
+          courses="//@courses.22 //@courses.23"/>
+    </semesters>
+    <semesters
+        semseterNumb="3">
+      <courseGroups
+          courses="//@courses.24 //@courses.25"/>
+    </semesters>
+    <semesters
+        semseterNumb="4">
+      <courseGroups
+          courses="//@courses.26 //@courses.27"/>
+    </semesters>
   </programmes>
   <courses name="Test Course"
       courseCode="ABC1234"
@@ -96,4 +254,87 @@
       credits="7.5"
       description="asd"
       level="higherLevel"/>
+  <courses name="Software Architecture"
+      courseCode="TDT4240"
+      credits="7.5"
+      description="asd"
+      level="thirdLEvel"/>
+  <courses name="Master in Informatics, Preparatory Project"
+      courseCode="IT3915"
+      credits="15.0"/>
+  <courses name="Master Thesis for MSIT"
+      courseCode="IT3920"
+      credits="30.0"
+      description="asd"
+      level="higherLevel"/>
+  <courses name="Introduksjon til kunstig intelligens"
+      courseCode="TDT4136"
+      credits="7.5"
+      description="asd"
+      level="thirdLEvel"/>
+  <courses name="Design av grafiske brukergrensesnitt"
+      courseCode="IT3402"
+      credits="7.5"
+      description="asd"
+      level="thirdLEvel"/>
+  <courses name="Digital tjenesteinnovasjon"
+      courseCode="TDT4257"
+      credits="7.5"
+      description="asd"
+      level="thirdLEvel"/>
+  <courses name="Datateknologi, fordypningsprosjekt"
+      courseCode="TDT4501"
+      credits="15.0"
+      description="asd"
+      level="higherLevel"/>
+  <courses name="Datateknologi, fordypningsemne"
+      courseCode="TDT4506"
+      credits="7.5"
+      description="asd"
+      level="higherLevel"/>
+  <courses name="Datateknologi, masteroppgave"
+      courseCode="TDT4900"
+      credits="30.0"
+      description="asd"
+      level="higherLevel"/>
+  <courses name="EX phil"
+      courseCode="TDT1233"
+      credits="7.5"
+      description="asd"/>
+  <courses name="Matte 1"
+      courseCode="TDT1234"
+      credits="7.5"
+      description="asd"/>
+  <courses name="Diskret matte"
+      courseCode="TDT1235"
+      credits="7.5"
+      description="asd"/>
+  <courses name="Objektorientert programmering"
+      courseCode="TDT1237"
+      credits="7.5"
+      description="asd"/>
+  <courses name="Krets og digitalteknikk"
+      courseCode="TDT1223"
+      credits="7.5"
+      description="asd"/>
+  <courses name="Algoritmer og datastrukturer"
+      courseCode="TDT1255"
+      credits="7.5"
+      description="asd"
+      level="secondLevel"/>
+  <courses name="Statistikk"
+      courseCode="TDT1211"
+      credits="7.5"
+      description="asd"
+      level="secondLevel"/>
+  <courses name="Programvareutvikling"
+      courseCode="TDT1219"
+      credits="7.5"
+      description="asd"
+      level="secondLevel"/>
+  <courses name="Modellering"
+      courseCode="TDT1911"
+      credits="7.5"
+      description="asd"
+      level="secondLevel"/>
 </program_web_page:NTNU>

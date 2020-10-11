@@ -11,6 +11,7 @@
       <genEnumLiterals ecoreEnumLiteral="program_web_page.ecore#//groupType/O"/>
       <genEnumLiterals ecoreEnumLiteral="program_web_page.ecore#//groupType/M1A"/>
       <genEnumLiterals ecoreEnumLiteral="program_web_page.ecore#//groupType/M2A"/>
+      <genEnumLiterals ecoreEnumLiteral="program_web_page.ecore#//groupType/VA"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="program_web_page.ecore#//degreeLevel">
       <genEnumLiterals ecoreEnumLiteral="program_web_page.ecore#//degreeLevel/firstLevel"/>

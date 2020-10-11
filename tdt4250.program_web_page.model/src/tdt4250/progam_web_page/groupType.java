@@ -46,7 +46,15 @@ public enum groupType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	M2A(2, "M2A", "M2A");
+	M2A(2, "M2A", "M2A"), /**
+	 * The '<em><b>VA</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VA_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	VA(3, "VA", "VA");
 
 	/**
 	 * The '<em><b>O</b></em>' literal value.
@@ -82,6 +90,17 @@ public enum groupType implements Enumerator {
 	public static final int M2A_VALUE = 2;
 
 	/**
+	 * The '<em><b>VA</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VA
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VA_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>group Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +111,7 @@ public enum groupType implements Enumerator {
 			O,
 			M1A,
 			M2A,
+			VA,
 		};
 
 	/**
@@ -151,6 +171,7 @@ public enum groupType implements Enumerator {
 			case O_VALUE: return O;
 			case M1A_VALUE: return M1A;
 			case M2A_VALUE: return M2A;
+			case VA_VALUE: return VA;
 		}
 		return null;
 	}

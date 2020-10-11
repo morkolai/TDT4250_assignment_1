@@ -39,6 +39,7 @@
     <eLiterals name="O"/>
     <eLiterals name="M1A" value="1"/>
     <eLiterals name="M2A" value="2"/>
+    <eLiterals name="VA" value="3" literal="VA"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Course">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">

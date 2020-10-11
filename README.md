@@ -32,3 +32,7 @@ The `Course` class has a derived feature called `fullCourseTitle` which is compu
 
 ## Improvements
 
+## Changes after initial assignment due date
+ - Added VA enum element to grouptype in model.
+ - Added more details to the instance model to have more content for assignment 2.
+
